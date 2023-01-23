@@ -92,6 +92,11 @@ TranslateWithCopy.prototype.commandEvent = function(event) {
     }    
 }
 
+TranslateWithCopy.prototype.slotNumberOfCopiesChanged = function(v) {
+    Transform.prototype.slotNumberOfCopiesChanged.call(this);
+    this.setState(TranslateWithCopy.State.SettingReferencePoint);
+};
+
 
 TranslateWithCopy.init = function(basePath) {
     var action = new RGuiAction(qsTr("Copy N"), RMainWindowQt.getMainWindow());
@@ -100,8 +105,8 @@ TranslateWithCopy.init = function(basePath) {
     action.setScriptFile(basePath + "/TranslateWithCopy.js");
     action.setIcon(basePath + "/TranslateWithCopy.svg");
     action.setStatusTip(qsTr("Move/Copy with Copy turned on, number of duplicates input via command line"));
-    action.setDefaultShortcut(new QKeySequence("m,c"));
-    action.setDefaultCommands(["mvc","mc"]);
+    action.setDefaultShortcut(new QKeySequence("m,n"));
+    action.setDefaultCommands(["mvn","mn"]);
     action.setGroupSortOrder(13100);
     action.setSortOrder(103);
     action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel", "ModifyMatrixPanel"]);
