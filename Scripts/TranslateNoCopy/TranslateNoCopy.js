@@ -6,6 +6,7 @@ include("scripts/Modify/Translate/Translate.js");
  */
 function TranslateNoCopy(guiAction) {
     Translate.call(this, guiAction);
+    this.useDialog = false;
     this.setUiOptions("scripts/Modify/Translate/Translate.ui");
 }
 
