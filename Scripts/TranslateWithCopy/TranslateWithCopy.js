@@ -107,7 +107,6 @@ TranslateWithCopy.init = function(basePath) {
     action.setScriptFile(basePath + "/TranslateWithCopy.js");
     action.setIcon(basePath + "/TranslateWithCopy.svg");
     action.setStatusTip(qsTr("Move/Copy with Copy turned on, number of duplicates input via command line"));
-    action.setDefaultShortcut(new QKeySequence("m,n"));
     action.setDefaultCommands(["mvn","mn"]);
     action.setGroupSortOrder(13100);
     action.setSortOrder(103);

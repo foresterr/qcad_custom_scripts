@@ -33,8 +33,7 @@ TranslateNoCopy.init = function(basePath) {
     action.setScriptFile(basePath + "/TranslateNoCopy.js");
     action.setIcon(basePath + "/TranslateNoCopy.svg");
     action.setStatusTip(qsTr("Move/Copy with Copy turned off"));
-    action.setDefaultShortcut(new QKeySequence("m,m"));
-    action.setDefaultCommands(["mvn","mv0","mm"]);
+    action.setDefaultCommands(["mv0","m0"]);
     action.setGroupSortOrder(13100);
     action.setSortOrder(101);
     action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel", "ModifyMatrixPanel"]);

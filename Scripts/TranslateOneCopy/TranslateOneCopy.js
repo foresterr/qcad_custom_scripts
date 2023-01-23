@@ -34,7 +34,6 @@ TranslateOneCopy.init = function(basePath) {
     action.setScriptFile(basePath + "/TranslateOneCopy.js");
     action.setIcon(basePath + "/TranslateOneCopy.svg");
     action.setStatusTip(qsTr("Move/Copy with Copy turned on, pre-set to one copy"));
-    action.setDefaultShortcut(new QKeySequence("m,1"));
     action.setDefaultCommands(["mv1","m1"]);
     action.setGroupSortOrder(13100);
     action.setSortOrder(102);
