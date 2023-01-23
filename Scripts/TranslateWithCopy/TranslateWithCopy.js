@@ -56,9 +56,11 @@ TranslateWithCopy.prototype.escapeEvent = function() {
     case TranslateWithCopy.State.SettingCopies:
         Transform.prototype.escapeEvent.call(this);
         break;
-
-    default:
-        Translate.prototype.escapeEvent.call(this);
+    case TranslateWithCopy.State.SettingReferencePoint:
+        this.setState(TranslateWithCopy.State.SettingCopies);
+        break;        
+    case TranslateWithCopy.State.SettingTargetPoint:
+        this.setState(TranslateWithCopy.State.SettingReferencePoint);
         break;
     }
 };
