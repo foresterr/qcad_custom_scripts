@@ -94,12 +94,12 @@ TranslateWithCopy.prototype.commandEvent = function(event) {
 
 
 TranslateWithCopy.init = function(basePath) {
-    var action = new RGuiAction(qsTranslate("TranslateWithCopy", "Move (with copy)"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Copy/Clone"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/TranslateWithCopy.js");
     action.setIcon(basePath + "/TranslateWithCopy.svg");
-    action.setStatusTip(qsTr("Move/Copy with Copy turned on"));
+    action.setStatusTip(qsTr("Move/Copy with Copy turned on, number of duplicates input via command line"));
     action.setDefaultShortcut(new QKeySequence("m,c"));
     action.setDefaultCommands(["mvc","mc"]);
     action.setGroupSortOrder(13100);

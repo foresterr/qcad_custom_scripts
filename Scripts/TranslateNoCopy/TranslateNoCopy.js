@@ -27,7 +27,7 @@ TranslateNoCopy.prototype.beginEvent = function() {
 
 
 TranslateNoCopy.init = function(basePath) {
-    var action = new RGuiAction(qsTr("Move (no copy)"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Move"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/TranslateNoCopy.js");
