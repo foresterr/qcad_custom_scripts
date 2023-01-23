@@ -93,7 +93,7 @@ TranslateWithCopy.prototype.commandEvent = function(event) {
 }
 
 TranslateWithCopy.prototype.slotNumberOfCopiesChanged = function(v) {
-    Transform.prototype.slotNumberOfCopiesChanged.call(this);
+    Transform.prototype.slotNumberOfCopiesChanged.call(this, v);
     this.setState(TranslateWithCopy.State.SettingReferencePoint);
 };
 
