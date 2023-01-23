@@ -94,7 +94,7 @@ TranslateWithCopy.prototype.commandEvent = function(event) {
 
 
 TranslateWithCopy.init = function(basePath) {
-    var action = new RGuiAction(qsTr("Copy/Clone"), RMainWindowQt.getMainWindow());
+    var action = new RGuiAction(qsTr("Copy N"), RMainWindowQt.getMainWindow());
     action.setRequiresDocument(true);
     action.setRequiresSelection(true);
     action.setScriptFile(basePath + "/TranslateWithCopy.js");
@@ -103,6 +103,6 @@ TranslateWithCopy.init = function(basePath) {
     action.setDefaultShortcut(new QKeySequence("m,c"));
     action.setDefaultCommands(["mvc","mc"]);
     action.setGroupSortOrder(13100);
-    action.setSortOrder(800);
-    action.setWidgetNames(["ModifyMenu"]);
+    action.setSortOrder(103);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel", "ModifyMatrixPanel"]);
 };

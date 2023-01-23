@@ -36,6 +36,6 @@ TranslateNoCopy.init = function(basePath) {
     action.setDefaultShortcut(new QKeySequence("m,m"));
     action.setDefaultCommands(["mvn","mv0","mm"]);
     action.setGroupSortOrder(13100);
-    action.setSortOrder(700);
-    action.setWidgetNames(["ModifyMenu"]);
+    action.setSortOrder(101);
+    action.setWidgetNames(["ModifyMenu", "ModifyToolBar", "ModifyToolsPanel", "ModifyMatrixPanel"]);
 };
